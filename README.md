@@ -12,17 +12,16 @@ Windows 上的 Codex Skill，用于部署一个跟随模型选择器的截图浮
 
 ## 安装
 
-将目录放入 Codex 的 Skills 目录后，在该目录运行：
+1. 下载仓库根目录的 `screenshot-overlay-helper.zip` 并解压。
+2. 将解压后的 `screenshot-overlay-helper` 目录放入 Codex 的 Skills 目录。
+3. 在该目录运行：
 
 ```powershell
 pwsh -NoLogo -NoProfile -File .\scripts\Install-Screenshot-Helpers.ps1
 ```
 
-需要 Windows 10/11、Python 3、Pillow 和 PowerShell 7。详情请查看 [部署与排查说明](references/deployment.md)。
+需要 Windows 10/11、Python 3、Pillow 和 PowerShell 7。解压包中的 `references/deployment.md` 提供部署与排查说明。
 
-## 验证
+## 私有仓库访问
 
-```powershell
-Get-ChildItem .\assets\helper\*.py | ForEach-Object { python -m py_compile $_.FullName }
-python .\tests\verify_overlay.py
-```
+本仓库为私有仓库。其他人需要先被添加为协作者，才能下载压缩包并使用这个 Skill。
