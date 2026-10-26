@@ -22,6 +22,12 @@ pwsh -NoLogo -NoProfile -File .\scripts\Install-Screenshot-Helpers.ps1
 
 需要 Windows 10/11、Python 3、Pillow 和 PowerShell 7。解压包中的 `references/deployment.md` 提供部署与排查说明。
 
+仓库根目录现同时提供 `SKILL.md` 与完整源文件，可克隆后按同样方式安装。
+
+## 2026-10-26 修复
+
+修复 WorkBuddy 在窗口缩小或显示器变化后截图按钮落到窗口/屏幕外的问题。保存的拖动偏移不变，显示位置同时限制在窗口和所在显示器工作区内。增加 `scripts/diagnose_helper.py`，用于只读检查最小化状态、助手可见性及位置越界。已有安装应更新实际运行目录中的 `workbuddy_screenshot_overlay.py` 和 `screenshot_win32.py`，然后重启 WorkBuddy 截图助手。
+
 ## 私有仓库访问
 
 本仓库为私有仓库。其他人需要先被添加为协作者，才能下载压缩包并使用这个 Skill。

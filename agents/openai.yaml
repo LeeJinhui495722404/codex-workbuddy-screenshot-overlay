@@ -1,0 +1,3 @@
+interface:
+  display_name: "截图浮层助手"
+  short_description: "部署和维护 Codex / WorkBuddy 截图浮层"
